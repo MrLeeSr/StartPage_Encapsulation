@@ -4,13 +4,12 @@
 APP第一次启动弹出，第二次启动屏蔽。
 
 使用方法：
+
 引入头文件：
 #import "hDisplayView.h"
 
 在AppDelegate的didFinishLaunchingWithOptions方法中添加
-/**
-     可以在这里进行一个判断的设置，如果是app第一次启动就加载启动页，如果不是，则直接进入首页
-     **/
+
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
